@@ -1,16 +1,16 @@
 # Angular Social Login
 
-> Use [Discussions](https://github.com/abacritt/angularx-social-login/discussions) for questions.
+> Use [Discussions](https://github.com/tomijunior/angularx-social-login/discussions) for questions.
 
-Social login and authentication module for Angular 12. Supports authentication with **Google**, **Facebook**, **Amazon**, **Microsoft**, and **VK** out of the box. Can be extended to other providers also.
+Social login and authentication module for Angular 14. Supports authentication with **Google**, **Facebook**, **Amazon**, **Microsoft**, and **VK** out of the box. Can be extended to other providers also.
 
-Check out the [demo](https://abacritt.github.io/angularx-social-login/).
+Check out the [demo](https://tomijunior.github.io/angularx-social-login/).
 
 ### Comatibility Matrix
 
 | Library Version | Angular Version |
 | --------------- | --------------- |
-| 4               | 12              |
+| 4               | 12,13,14              |
 | 3               | 9, 10, 11       |
 | 2               | 5, 6, 7, 8      |
 
@@ -27,11 +27,11 @@ npm i angularx-social-login
 In your `AppModule`, import the `SocialLoginModule`
 
 ```javascript
-import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { SocialLoginModule, SocialAuthServiceConfig } from '@tomijunior/angularx-social-login';
 import {
   GoogleLoginProvider,
   FacebookLoginProvider
-} from 'angularx-social-login';
+} from '@tomijunior/angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -73,8 +73,8 @@ export class AppModule { }
 
 ```javascript
 
-import { SocialAuthService } from "angularx-social-login";
-import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
+import { SocialAuthService } from "@tomijunior/angularx-social-login";
+import { FacebookLoginProvider, GoogleLoginProvider } from "@tomijunior/angularx-social-login";
 
 @Component({
   selector: 'app-demo',
@@ -106,8 +106,8 @@ Once a user is logged in manual refresh token method can be triggered
 
 ```javascript
 
-import { SocialAuthService } from "angularx-social-login";
-import { GoogleLoginProvider } from "angularx-social-login";
+import { SocialAuthService } from "@tomijunior/angularx-social-login";
+import { GoogleLoginProvider } from "@tomijunior/angularx-social-login";
 
 @Component({
   selector: 'app-demo',
@@ -130,8 +130,8 @@ export class DemoComponent implements OnInit {
 You are notified when user logs in or logs out. You receive a `SocialUser` object when the user logs in and a `null` when the user logs out. `SocialUser` object contains basic user information such as name, email, photo URL, etc. along with the `auth_token`. You can communicate the `auth_token` to your server to authenticate the user in server and make API calls from server.
 
 ```javascript
-import { SocialAuthService } from "angularx-social-login";
-import { SocialUser } from "angularx-social-login";
+import { SocialAuthService } from "@tomijunior/angularx-social-login";
+import { SocialUser } from "@tomijunior/angularx-social-login";
 
 @Component({
   selector: 'app-demo',
